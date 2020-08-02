@@ -18,11 +18,11 @@ describe('NewsDetails', () => {
     test('should have routing url on next and previous button click', () => {
         const previousBtn = screen.getByTestId('previous');
         expect(previousBtn).toBeTruthy();
-        expect(previousBtn.attributes.getNamedItem('href').value).toBe('/0')
+        expect(previousBtn.attributes.getNamedItem('href').value).toBe('/app/0')
 
         const nextBtn = screen.getByTestId('next');
         expect(nextBtn).toBeTruthy();
-        expect(nextBtn.attributes.getNamedItem('href').value).toBe('/2')
+        expect(nextBtn.attributes.getNamedItem('href').value).toBe('/app/2')
     });
 
 

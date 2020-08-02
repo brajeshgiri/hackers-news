@@ -10,6 +10,7 @@ const NewsContainer = () => {
   const data = useSelector(state => state.comments);
   const { comments } = data;
   const pageNo = isNaN(params.pageNo) ? 1 : Number(params.pageNo);
+  console.log('page no.', params);
 
   useEffect(() => {
     loadComments(pageNo);

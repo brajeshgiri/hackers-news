@@ -6,8 +6,8 @@ import store from './store';
 const App = () => (
   <Provider store={store}>
     <Switch>
-      <Route path="/" exact={true} component={(props) => <NewsContainer {...props} />}></Route>
-      <Route path="/:pageNo" component={() => <NewsContainer />}>
+      <Route path="/app/" exact={true} component={(props) => <NewsContainer {...props} />}></Route>
+      <Route path="/app/:pageNo" component={() => <NewsContainer />}>
       </Route>
     </Switch>
   </Provider>

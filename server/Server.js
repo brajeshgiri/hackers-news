@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server'
 import App from '../src/App';
 import { StaticRouter } from 'react-router-dom';
+import Axios from 'axios';
 
 const app = express();
 
@@ -27,6 +28,15 @@ app.get(`/${appName}/*`, (req, res, next) => {
             )}</div>`));
     });
 });
+
+app.get('api', (req, res) => {
+    const query = req.query;
+    const uri = "https://hn.algolia.com/api/v1/search" + query
+    console.log('uri call::', uri);
+    Axios.get(uri).then(response => {
+        res.send(response);
+    })
+})
 
 const port = process.env.PORT || 3030;
 app.listen(port, () => {
