@@ -1,0 +1,3 @@
+export const LOAD_COMMENTS = '@COMMENTS/LOAD_COMMENTS';
+export const ON_UPVOTE = '@COMMENTS/ON_UPVOTE';
+export const ON_HIDE = '@COMMENTS/ON_HIDE';
