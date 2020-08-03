@@ -12,6 +12,9 @@ This application developed for a assignment task.
 ## Development
 To run application follow below steps
 
-npm install
-npm run start:ssr
+** npm install
+** npm run start:ssr
 
+To get unit test coverage
+
+** npm run coverage
